@@ -10,6 +10,8 @@ public class TurretRotation : MonoBehaviour
     void Update()
     {
         Vector3 relativePos = mousePosition.position - transform.position;
-        transform.rotation = Quaternion.LookRotation(relativePos, new Vector3 (0,1,0));  
+        Vector3 lookAtRotation = Quaternion.LookRotation(mousePosition.position - transform.position).eulerAngles;
+        transform.rotation = Quaternion.Euler(Vector3.Scale(lookAtRotation, new Vector3 (0,1,0)));
+
     }
 }
