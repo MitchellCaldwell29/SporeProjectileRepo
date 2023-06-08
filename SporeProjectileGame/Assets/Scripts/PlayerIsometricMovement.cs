@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class PlayerIsometricMovement : MonoBehaviour
 {
-    [SerializeField] private Rigidbody playerRb; //Set a visible private field wherer later in Unity we can set the rigidbody of any object we put this script on. 
-    [SerializeField] private float playerSpeed = 5; //The set value of the 
-    [SerializeField] private float turnSpeed = 360; //How fast should the turning rotation spee be. 360 sets it to 1 full 360 rotation a second.  
-    private Vector3 playerInput; // Set a value for the Vector3 which is an ordered triplet of the x,y and z axis and represent them as a number (it represents a point, direction and/or length in3D space. 
+    [SerializeField] private Rigidbody playerRb; //Set a visible private field where later in Unity we can set the rigidbody of any object we put this script on. 
+    [SerializeField] private float playerSpeed = 5; //The set value of the movement speed. 
+    [SerializeField] private float turnSpeed = 360; //How fast should the turning rotation speed be. 360 sets it to 1 full 360 rotation a second.  
+    private Vector3 playerInput; // Set a value for the Vector3 which is an ordered triplet of the x,y and z axis and represent them as a number (it represents a point, direction and/or length in 3D space. 
 
     void Update() //Updates once per frame
     {
@@ -16,7 +16,7 @@ public class PlayerIsometricMovement : MonoBehaviour
         Look(); 
     }
 
-    void FixedUpdate() //A fixed update is only callws upon an input from the user. 
+    void FixedUpdate() //A fixed update is only called upon an input from the user. 
     {
         Move(); 
     }
@@ -31,7 +31,7 @@ public class PlayerIsometricMovement : MonoBehaviour
     {
         if (playerInput != Vector3.zero)//If input does not equal, effectively making the player not snap back to the forward position
         {
-            var matrix = Matrix4x4.Rotate(Quaternion.Euler(0,45,0));// The Matrix takes in the 4D axis (x,y,z,w) and all their possible combinations. We will rotate these dimensions based on our Quaternion values.
+            var matrix = Matrix4x4.Rotate(Quaternion.Euler(0,45,0));// The Matrix takes in the 4D axis (x,y,z,w) and all their possible combinations (by this I mean the +1 and -1 value combinations.) We will rotate these dimensions based on our Quaternion values.
                                                                     // In this case the camera is set to a 45 degree angle so we change the y axis to the same angle. Now up is in a North direction and not a diagonal direction.
                                                                     //Quaternion.Euler is used to rotate a vector position. 
 
