@@ -23,7 +23,6 @@ public class GameManagment : MonoBehaviour
         projectileCount = 0;
         projectileText.text = "Projectiles: " + projectileCount;
         UpdateProjectile(0);
-
     }
 
     private void Update()
@@ -35,8 +34,6 @@ public class GameManagment : MonoBehaviour
             projectileCount++;
             sporeText.text = "Spores: " + sporeCount;
             projectileText.text = "Projectiles: " + projectileCount;
-
-
         }
     }
 
