@@ -1031,8 +1031,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpawnPoint: {fileID: 1310049777}
+  gameManager: {fileID: 748794534}
   projectilePrefab: {fileID: 115637731649888283, guid: a7e699259f6b4e14ab75373802507e28, type: 3}
   projectileSpeed: 20
+  shootProjectile: 1
 --- !u!1 &657063675
 GameObject:
   m_ObjectHideFlags: 0
@@ -10859,7 +10861,7 @@ GameObject:
   - component: {fileID: 748794536}
   - component: {fileID: 748794535}
   m_Layer: 0
-  m_Name: Game Manager
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10880,6 +10882,7 @@ MonoBehaviour:
   sporeText: {fileID: 2052397228}
   projectileText: {fileID: 1575512605}
   sporeCount: 0
+  projectileCount: 0
 --- !u!4 &748794536
 Transform:
   m_ObjectHideFlags: 0

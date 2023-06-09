@@ -3,21 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SocialPlatforms.Impl;
+using System;
 
 public class GameManagment : MonoBehaviour
 {
     public TextMeshProUGUI sporeText;
-    public TextMeshProUGUI projectileText; 
+    public TextMeshProUGUI projectileText;
     public int sporeCount;
-    private int projectileCount; 
+    public int projectileCount;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        sporeCount = 0; 
+        sporeCount = 0;
         sporeText.text = "Spores: " + sporeCount;
-        UpdateSpore(0); 
+        UpdateSpore(0);
 
         projectileCount = 0;
         projectileText.text = "Projectiles: " + projectileCount;
@@ -52,3 +53,4 @@ public class GameManagment : MonoBehaviour
         projectileText.text = "Projectiles: " + projectileCount;
     }
 }
+
