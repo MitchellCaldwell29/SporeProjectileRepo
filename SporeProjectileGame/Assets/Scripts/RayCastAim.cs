@@ -6,7 +6,11 @@ using UnityEngine.UI;
 public class RayCastAim : MonoBehaviour
 {
     Camera cam;
-    public LayerMask mask; 
+    public LayerMask mask;
+
+    Vector3 aimCubePosition;
+    Vector3 AimCubePosition;
+    Vector3 RayTest; 
 
     // Start is called before the first frame update
     void Start()
@@ -22,16 +26,27 @@ public class RayCastAim : MonoBehaviour
         mousePos.z = 10f;
         mousePos = cam.ScreenToWorldPoint(mousePos);
 
+        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            aimCubePosition = hit.point;
+            AimCubePosition = hit.normal;
+            RayTest = hit.point;
+            Debug.Log(RayTest);
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit; 
-
-            if (Physics.Raycast(ray,out hit, 500, mask))
+            if (Physics.Raycast(ray, out hit, 500, mask))
             {
                 Debug.Log(hit.transform.name);
                 hit.transform.GetComponent<Renderer>().material.color = Color.red;
             }
+
         }
+
+
     }
 }
