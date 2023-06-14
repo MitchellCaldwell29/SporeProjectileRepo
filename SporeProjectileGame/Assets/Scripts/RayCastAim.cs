@@ -40,6 +40,9 @@ public class RayCastAim : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
+                transform.LookAt(hit.point); //Testing to see if camera will rotate. 
+
+                
                 Instantiate(rayCastGroundTest, new Vector3(hit.point.x, hit.point.y, hit.point.z), Quaternion.identity);
 
                 aimCubePosition = hit.point;
