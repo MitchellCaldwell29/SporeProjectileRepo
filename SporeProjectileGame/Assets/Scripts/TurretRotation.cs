@@ -8,7 +8,7 @@ public class TurretRotation : MonoBehaviour
     public float rotationSpeed;
 
     private Quaternion lookRotation;
-    private Vector3 direction;
+    private Vector3 direction; 
     // Update is called once per frame
     void Update()
     {
