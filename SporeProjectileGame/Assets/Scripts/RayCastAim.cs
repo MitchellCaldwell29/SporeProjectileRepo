@@ -38,9 +38,9 @@ public class RayCastAim : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
 
-            if (Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray, out hit, 500, mask))
             {
-                transform.LookAt(hit.point); //Testing to see if camera will rotate. 
+                transform.LookAt(new Vector3(hit.point.x, 1.35f, hit.point.z)); //Testing to see if camera will rotate. 
 
                 
                 Instantiate(rayCastGroundTest, new Vector3(hit.point.x, hit.point.y, hit.point.z), Quaternion.identity);

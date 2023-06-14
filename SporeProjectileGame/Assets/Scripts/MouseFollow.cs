@@ -11,11 +11,9 @@ public class MouseFollow : MonoBehaviour
 
     void Update()
     {
-        //pos = Input.mousePosition;
-        //pos.z = offset;
-        //transform.position = Camera.main.ScreenToWorldPoint(pos);
-
-        transform.LookAt(rayCastGroundTest.transform.position);
+        pos = Input.mousePosition;
+        pos.z = offset;
+        transform.position = Camera.main.ScreenToWorldPoint(pos);
 
         //pos = Input.mousePosition + rayCastGroundTest.transform.position;
         //pos.z = offset;
