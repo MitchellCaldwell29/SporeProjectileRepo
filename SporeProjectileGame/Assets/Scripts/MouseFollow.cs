@@ -11,15 +11,14 @@ public class MouseFollow : MonoBehaviour
 
     void Update()
     {
-        //pos = Input.mousePosition;
-        //pos.z = offset;
-        //transform.position = Camera.main.ScreenToWorldPoint(pos);
-
-        transform.LookAt(rayCastGroundTest.transform.position);
+        pos = Input.mousePosition;
+        pos.z = offset;
+        transform.position = Camera.main.ScreenToWorldPoint(pos);
+    }
 
         //pos = Input.mousePosition + rayCastGroundTest.transform.position;
         //pos.z = offset;
         //transform.position = Camera.main.ScreenToWorldPoint(pos);
-        //This sets the raycast to show wherever the cube is instantiated. 
-    }
+        //Sets the raycast position to be where the object is instantiated on what surface. 
+
 }

@@ -11231,7 +11231,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &705595438
 GameObject:
@@ -21028,7 +21028,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &748794534
 GameObject:
@@ -21127,7 +21127,7 @@ Transform:
   - {fileID: 1711573896}
   - {fileID: 1705496520}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &849561524
 GameObject:
@@ -21367,7 +21367,6 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
-  - component: {fileID: 963194229}
   - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
@@ -21443,21 +21442,6 @@ Transform:
   m_Father: {fileID: 1547486224}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &963194229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d68b69df50a38244b743d3b4e668f85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mask:
-    serializedVersion: 2
-    m_Bits: 72
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31334,27 +31318,13 @@ GameObject:
   - component: {fileID: 1281013456}
   - component: {fileID: 1281013455}
   - component: {fileID: 1281013454}
-  - component: {fileID: 1281013453}
   m_Layer: 0
   m_Name: TurretAim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1281013453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1281013452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f0a7c041146fa145a91b15ca57ef4e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offset: 3
+  m_IsActive: 0
 --- !u!65 &1281013454
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31431,7 +31401,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1310049776
 GameObject:
@@ -31807,7 +31777,7 @@ Transform:
   m_Children:
   - {fileID: 963194228}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 30, y: 45, z: 0}
 --- !u!1 &1551577272
 GameObject:
@@ -42034,6 +42004,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1780052294}
   - component: {fileID: 1780052295}
+  - component: {fileID: 1780052296}
   m_Layer: 0
   m_Name: TurretPivot
   m_TagString: Untagged
@@ -42071,6 +42042,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mousePosition: {fileID: 1281013457}
   rotationSpeed: 1
+--- !u!114 &1780052296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780052293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d68b69df50a38244b743d3b4e668f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mask:
+    serializedVersion: 2
+    m_Bits: 64
+  rayCastGroundTest: {fileID: 8355580921507631823, guid: 6fcf968343ee3df4dbbfca41377929f6, type: 3}
 --- !u!1 &1788235849
 GameObject:
   m_ObjectHideFlags: 0
@@ -66867,7 +66854,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 777754231415326115, guid: e0800384079803846982544ad53ec1c8, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 777754231415326115, guid: e0800384079803846982544ad53ec1c8, type: 3}
       propertyPath: m_LocalPosition.x

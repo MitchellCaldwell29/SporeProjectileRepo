@@ -14,9 +14,9 @@ public class Projectile : MonoBehaviour
         Destroy(gameObject, lifespan);
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider collision)
     {
-        if(other.gameObject.tag == "Player")
+        if(gameObject.tag == "Player")
         {
             healthScript.TakeDamage(damage); 
             Destroy(gameObject);
