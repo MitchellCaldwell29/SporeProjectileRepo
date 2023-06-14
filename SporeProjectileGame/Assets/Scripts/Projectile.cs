@@ -4,16 +4,23 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public float life = 3; // lifespan of the bullet in seconds
+    public float lifespan = 3; // lifespan of the bullet in seconds
+    public HealthScript healthScript;
+    public int damage = 1; 
 
     private void Awake()
     {
-        Destroy(gameObject, life);
+        healthScript = FindObjectOfType<HealthScript>();
+        Destroy(gameObject, lifespan);
     }
 
-    void OnCollisonEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        Destroy(collision.gameObject);
-        Destroy(gameObject);
+        if(other.gameObject.tag == "Player")
+        {
+            healthScript.TakeDamage(damage); 
+            Destroy(gameObject);
+        }
+
     }
 }
