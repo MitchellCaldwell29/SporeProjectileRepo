@@ -34,8 +34,9 @@ public class RayCastAim : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, 500, mask))
         {
-            turretRayPosition.transform.LookAt(new Vector3(hit.point.x, 1.35f, hit.point.z)); //Testing to see if camera will rotate. 
+            turretRayPosition.transform.LookAt(new Vector3(hit.point.x, 1.35f, hit.point.z)); //turretRayPosition will look at the where the raycast hits 
             transform.rotation = Quaternion.Slerp(transform.rotation, turretRayPosition.transform.rotation, Time.fixedDeltaTime * rotationSpeed);
+            //The turret will then rotate to the position of the turretRayPosition
         }
 
         if (Input.GetMouseButtonDown(0))
