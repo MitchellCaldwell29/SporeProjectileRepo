@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8536876092178697616}
   - component: {fileID: 2180636566096274563}
   - component: {fileID: 8988625031300987485}
+  - component: {fileID: 5033748168569912086}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -97,7 +98,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.54
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &2180636566096274563
 Rigidbody:
@@ -130,3 +131,16 @@ MonoBehaviour:
   lifespan: 3
   healthScript: {fileID: 0}
   damage: 1
+--- !u!135 &5033748168569912086
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115637731649888283}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
