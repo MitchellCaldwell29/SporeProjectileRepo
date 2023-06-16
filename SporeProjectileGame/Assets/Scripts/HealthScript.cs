@@ -19,9 +19,7 @@ public class HealthScript : MonoBehaviour
     public void TakeDamage(float amount)
     {
         health -= amount;
-        healthBar.GetComponent<HealthSlider>().UpdateSlider(health / maxHealth);
-
-        Debug.Log("Dealing damage"); 
+        healthBar.GetComponent<HealthSlider>().UpdateSlider(health / maxHealth); 
        
         if(health <= 0)
         {

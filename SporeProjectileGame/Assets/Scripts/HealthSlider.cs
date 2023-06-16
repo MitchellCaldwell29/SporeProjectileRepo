@@ -10,6 +10,5 @@ public class HealthSlider : MonoBehaviour
     public void UpdateSlider(float value)
     {
         healthSlider.value = value;
-        Debug.Log("Damage dealt");
     }
 }

@@ -30,10 +30,8 @@ public class GameManagment : MonoBehaviour
 
         if (sporeCount >= 3)
         {
-            sporeCount = 0;
-            projectileCount++;
-            sporeText.text = "Spores: " + sporeCount;
-            projectileText.text = "Projectiles: " + projectileCount;
+            UpdateProjectile(1);
+            UpdateSpore(-3);
         }
     }
 

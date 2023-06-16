@@ -12,7 +12,7 @@ public class SporePickUp : MonoBehaviour
     {
         if (gameObject.tag == "Spore")
         {
-            GameManager.GetComponent<GameManagment>().UpdateSpore(+1);
+            GameManager.GetComponent<GameManagment>().UpdateSpore(1);
             Destroy(gameObject);
         }
     }
