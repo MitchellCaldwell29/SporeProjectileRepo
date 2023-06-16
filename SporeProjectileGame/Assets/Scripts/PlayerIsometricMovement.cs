@@ -9,6 +9,7 @@ public class PlayerIsometricMovement : MonoBehaviour
     [SerializeField] private float playerSpeed = 5; //The set value of the movement speed. 
     [SerializeField] private float turnSpeed = 360; //How fast should the turning rotation speed be. 360 sets it to 1 full 360 rotation a second.  
     private Vector3 playerInput; // Set a value for the Vector3 which is an ordered triplet of the x,y and z axis and represent them as a number (it represents a point, direction and/or length in 3D space. 
+    [SerializeField] private Transform playerCanvasTransform; 
 
     void Update() //Updates once per frame
     {
@@ -19,6 +20,11 @@ public class PlayerIsometricMovement : MonoBehaviour
     void FixedUpdate() //A fixed update is only called upon an input from the user. 
     {
         Move(); 
+    }
+
+    private void LateUpdate()//Happens after FixedUpdate
+    {
+        playerCanvasTransform.LookAt(Camera.main.transform);
     }
 
     void GatherInput() // Function that will gather the Input of the player. In this case W,A,S,D keys for moving up, down, left and right
