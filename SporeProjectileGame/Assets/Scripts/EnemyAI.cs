@@ -20,7 +20,7 @@ public class EnemyAI : MonoBehaviour
 
     //AI-States
     public float sightRange, attackRange;
-    public bool playerInSightRange, playerInAttackRange;
+    public bool playerInSightRange, playerInAttackRange; 
 
     private void Awake()
     {
@@ -37,6 +37,7 @@ public class EnemyAI : MonoBehaviour
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInSightRange && playerInAttackRange) AttackPlayer();
     }
+
     private void Patrolling()
     {
         if (!walkPointSet) SearchWalkPoint(); 
