@@ -5,31 +5,27 @@ using UnityEngine.UI;
 
 public class HealthScript : MonoBehaviour
 {
-    public Image healthBar; 
 
-    public int health;
-    public int maxHealth;
+    public float health;
+    public float maxHealth;
+    public GameObject healthBar;
 
 
     void Start()
     {
         health = maxHealth;
-        UpdateHealthBar();
     }
     
-    public void TakeDamage(int amount)
+    public void TakeDamage(float amount)
     {
-        health -= amount; 
-        UpdateHealthBar();
+        health -= amount;
+        healthBar.GetComponent<HealthSlider>().UpdateSlider(health / maxHealth);
 
+        Debug.Log("Dealing damage"); 
+       
         if(health <= 0)
         {
             Destroy(gameObject); //Destroy player 
         }
-    }
-
-    private void UpdateHealthBar()
-    {
-        healthBar.fillAmount = health / maxHealth;
     }
 }
