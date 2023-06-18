@@ -6,7 +6,7 @@ public class TurretFire : MonoBehaviour
 {
     public Transform projectileSpawnPoint;
     public GameObject gameManager;
-    public GameObject projectilePrefab;
+    public GameObject playerProjectilePrefab;
     public float projectileSpeed = 10;
     public bool shootProjectile;
 
@@ -31,7 +31,7 @@ public class TurretFire : MonoBehaviour
     {
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                var projectile = Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.rotation);//create the projectile
+                var projectile = Instantiate(playerProjectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.rotation);//create the projectile
                 projectile.GetComponent<Rigidbody>().velocity = projectileSpawnPoint.forward * projectileSpeed;//fire the projectile forward 
                 
                 gameManager.GetComponent<GameManagment>().projectileCount--;
