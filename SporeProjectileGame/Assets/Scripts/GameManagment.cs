@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SocialPlatforms.Impl;
 using System;
+using UnityEngine.SceneManagement; 
 
 public class GameManagment : MonoBehaviour
 {
@@ -47,5 +48,13 @@ public class GameManagment : MonoBehaviour
         projectileCount += addToProjectile;
         projectileText.text = "Projectiles: " + projectileCount;
     }
+
+    public void Restart()//Loads a scene which will be how we restart the game.
+    {
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
+
 }
 
