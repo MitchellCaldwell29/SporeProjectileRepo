@@ -37,11 +37,11 @@ public class PlayerIsometricMovement : MonoBehaviour
     {
         if (playerInput != Vector3.zero)//If input does not equal, effectively making the player not snap back to the forward position
         {
-            var matrix = Matrix4x4.Rotate(Quaternion.Euler(0,45,0));// The Matrix takes in the 4D axis (x,y,z,w) and all their possible combinations (by this I mean the +1 to -1 value combinations.) We will rotate these dimensions based on our Quaternion values.
+            var matrix = Quaternion.Euler(0,45,0);// We will rotate these to these dimensions based on our Quaternion values.
                                                                     // In this case the camera is set to a 45 degree angle so we change the y axis to the same angle. Now up is in a North direction and not a diagonal direction.
                                                                     //Quaternion.Euler is used to rotate a vector position. 
 
-            var alteredInput = matrix.MultiplyPoint3x4(playerInput);//Multiplies the matrix by the vector which is our player Input. WILL NEED THIS FOR ENEMIES AND OTHER OBJECTS THAT MOVE!!!!!!
+            var alteredInput = matrix * playerInput;//Multiplies the matrix which we have set above by the vector which is our player Input. WILL NEED THIS FOR ENEMIES AND OTHER OBJECTS THAT MOVE!!!!!!
 
             var direction = (transform.position + alteredInput) - transform.position;//transform position of the player + player altered camera and movement position. The current transform position to find the relative angle between the old position and the new one. 
             var lookRotation = Quaternion.LookRotation(direction, Vector3.up);//Quaternion takes the 4D and turns them into a value for 3D axis (x,y and z) and the lookRotation will be the direction and
