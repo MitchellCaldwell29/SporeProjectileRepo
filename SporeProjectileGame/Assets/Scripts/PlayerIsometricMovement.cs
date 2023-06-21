@@ -35,7 +35,7 @@ public class PlayerIsometricMovement : MonoBehaviour
 
     void Look()
     {
-        if (playerInput != Vector3.zero)//If input does not equal, effectively making the player not snap back to the forward position
+        if (playerInput != Vector3.zero)//If input does not equal 0 (if there is no player input), effectively making the player not snap back to the forward position
         {
             var matrix = Quaternion.Euler(0,45,0);// We will rotate these to these dimensions based on our Quaternion values.
                                                                     // In this case the camera is set to a 45 degree angle so we change the y axis to the same angle. Now up is in a North direction and not a diagonal direction.
