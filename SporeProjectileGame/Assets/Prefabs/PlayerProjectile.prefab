@@ -141,6 +141,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 280ab403e5abc13449da1bca6052f189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifespan: 3
+  lifespan: 0.5
   enemyHealth: {fileID: 0}
   damage: 1
