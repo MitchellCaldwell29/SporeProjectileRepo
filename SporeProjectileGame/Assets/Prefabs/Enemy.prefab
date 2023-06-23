@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 777754231415326119}
   - component: {fileID: 777754231415326118}
   - component: {fileID: 777754231415326124}
+  - component: {fileID: 5369547033928300328}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -65,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ff776d3060f2eea4f844ec97f5649921, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -167,3 +168,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5369547033928300328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777754231415326117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 912ab4e5b6b1c644f8dddcab21bdbcbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xRayMaterial: {fileID: 2100000, guid: 37ff5639fabc0f7438c9a46b34b7ab3e, type: 2}
